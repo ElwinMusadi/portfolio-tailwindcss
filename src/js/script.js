@@ -22,8 +22,15 @@ window.onscroll = function() {
   }
 }
 
-var angkot = 1;
-while( angkot <= 10) {
-  console.log('Angkot No. ' + angkot + ' beroperasi dengan baik.');
-  angkot++;
+var jumlahAngkot = 10,
+    angkotBeroperasi = 6,
+    noAngkot = 1;
+
+while( noAngkot <= angkotBeroperasi) {
+  console.log('Angkot No. ' + noAngkot + ' beroperasi dengan baik.');
+  noAngkot++;
+}
+
+for( noAngkot; noAngkot > angkotBeroperasi && noAngkot <= jumlahAngkot; noAngkot++) {
+  console.log('Angkot No. ' + noAngkot + ' sedang tidak beroperasi.');
 }
