@@ -22,6 +22,17 @@ window.onscroll = function() {
   }
 }
 
+$('.page-scroll').on('click', function(e) {
+    if( this.hash !== '' ) {
+      e.preventDefault();
+
+      const hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top - 20
+      }, 1000, 'easeInOutExpo')
+    }
+  });
+
 var jumlahAngkot = 10,
     angkotBeroperasi = 6,
     noAngkot = 1;
